@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion Section - How We Work</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f5f5;
+            padding: 40px 20px;
+        }
+
+        .accordion-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .accordion-item {
+            margin-bottom: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            background: linear-gradient(90deg, #f5ebe0 0%, #f5ebe0 75%, transparent 75%);
+            padding: 40px 60px;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+            clip-path: polygon(0 0, 95% 0, 100% 100%, 0 100%);
+        }
+
+        .accordion-header:hover {
+            background: linear-gradient(90deg, #ede5da 0%, #ede5da 75%, transparent 75%);
+        }
+
+        .accordion-header h2 {
+            font-size: 48px;
+            font-style: italic;
+            font-weight: 400;
+            color: #2c2c2c;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+            background-color: #ffffff;
+            padding: 0 60px;
+        }
+
+        .accordion-content.active {
+            max-height: 800px;
+            padding: 40px 60px;
+        }
+
+        .accordion-content p {
+            font-family: 'Georgia', serif;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #2c2c2c;
+            margin: 0;
+        }
+
+        .accordion-item.active .accordion-header {
+            background: #ffffff;
+            clip-path: none;
+        }
+
+        .accordion-item:nth-child(2) .accordion-header {
+            background: linear-gradient(90deg, #e8ddd0 0%, #e8ddd0 75%, transparent 75%);
+        }
+
+        .accordion-item:nth-child(2):hover .accordion-header {
+            background: linear-gradient(90deg, #e0d5c8 0%, #e0d5c8 75%, transparent 75%);
+        }
+
+        .accordion-item:nth-child(3) .accordion-header {
+            background: linear-gradient(90deg, #dcd1c1 0%, #dcd1c1 75%, transparent 75%);
+        }
+
+        .accordion-item:nth-child(3):hover .accordion-header {
+            background: linear-gradient(90deg, #d4c9b9 0%, #d4c9b9 75%, transparent 75%);
+        }
+
+        .accordion-item:nth-child(4) .accordion-header {
+            background: linear-gradient(90deg, #d0c5b2 0%, #d0c5b2 75%, transparent 75%);
+        }
+
+        .accordion-item:nth-child(4):hover .accordion-header {
+            background: linear-gradient(90deg, #c8bda0 0%, #c8bda0 75%, transparent 75%);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .accordion-header {
+                padding: 30px 30px;
+                clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
+            }
+
+            .accordion-header h2 {
+                font-size: 32px;
+            }
+
+            .accordion-content {
+                padding: 0 30px;
+            }
+
+            .accordion-content.active {
+                padding: 30px 30px;
+            }
+
+            .accordion-content p {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .accordion-header {
+                padding: 20px 20px;
+            }
+
+            .accordion-header h2 {
+                font-size: 24px;
+            }
+
+            .accordion-content {
+                padding: 0 20px;
+            }
+
+            .accordion-content.active {
+                padding: 20px 20px;
+            }
+
+            .accordion-content p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="accordion-container">
+        <!-- Accordion Item 1 -->
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <h2>How We Work...</h2>
+            </div>
+            <div class="accordion-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+
+        <!-- Accordion Item 2 -->
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <h2>Speed + Innovation</h2>
+            </div>
+            <div class="accordion-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            </div>
+        </div>
+
+        <!-- Accordion Item 3 -->
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <h2>Retail Partnerships</h2>
+            </div>
+            <div class="accordion-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+
+        <!-- Accordion Item 4 -->
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <h2>Consumer Excitement</h2>
+            </div>
+            <div class="accordion-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const accordionItem = this.parentElement;
+                    const accordionContent = this.nextElementSibling;
+
+                    // Toggle active class
+                    const isActive = accordionItem.classList.contains('active');
+
+                    // Close all accordion items
+                    document.querySelectorAll('.accordion-item').forEach(item => {
+                        item.classList.remove('active');
+                    });
+
+                    document.querySelectorAll('.accordion-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    // Open clicked item if it wasn't active
+                    if (!isActive) {
+                        accordionItem.classList.add('active');
+                        accordionContent.classList.add('active');
+                    }
+                });
+            });
+
+            // Open first item by default
+            if (accordionHeaders.length > 0) {
+                accordionHeaders[0].click();
+            }
+        });
+    </script>
+</body>
+</html>

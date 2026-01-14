@@ -1,0 +1,244 @@
+<style>
+    .custom-accordion * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .custom-accordion {
+        max-width: 1200px;
+        margin: 0 auto;
+        font-family: 'Georgia', 'Times New Roman', serif;
+    }
+
+    .custom-accordion .accordion-item {
+        margin-bottom: 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .custom-accordion .accordion-header {
+        background: linear-gradient(90deg, #f5ebe0 0%, #f5ebe0 75%, transparent 75%);
+        padding: 40px 60px;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.3s ease;
+        clip-path: polygon(0 0, 95% 0, 100% 100%, 0 100%);
+    }
+
+    .custom-accordion .accordion-header:hover {
+        background: linear-gradient(90deg, #ede5da 0%, #ede5da 75%, transparent 75%);
+    }
+
+    .custom-accordion .accordion-header h2 {
+        font-size: 48px;
+        font-style: italic;
+        font-weight: 400;
+        color: #2c2c2c;
+        margin: 0;
+        position: relative;
+        z-index: 1;
+    }
+
+    .custom-accordion .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+        background-color: #ffffff;
+        padding: 0 60px;
+    }
+
+    .custom-accordion .accordion-content.active {
+        max-height: 800px;
+        padding: 40px 60px;
+    }
+
+    .custom-accordion .accordion-content p {
+        font-family: 'Georgia', serif;
+        font-size: 18px;
+        line-height: 1.8;
+        color: #2c2c2c;
+        margin: 0;
+    }
+
+    .custom-accordion .accordion-item.active .accordion-header {
+        background: #ffffff;
+        clip-path: none;
+    }
+
+    .custom-accordion .accordion-item:nth-child(2) .accordion-header {
+        background: linear-gradient(90deg, #e8ddd0 0%, #e8ddd0 75%, transparent 75%);
+    }
+
+    .custom-accordion .accordion-item:nth-child(2):hover .accordion-header {
+        background: linear-gradient(90deg, #e0d5c8 0%, #e0d5c8 75%, transparent 75%);
+    }
+
+    .custom-accordion .accordion-item:nth-child(3) .accordion-header {
+        background: linear-gradient(90deg, #dcd1c1 0%, #dcd1c1 75%, transparent 75%);
+    }
+
+    .custom-accordion .accordion-item:nth-child(3):hover .accordion-header {
+        background: linear-gradient(90deg, #d4c9b9 0%, #d4c9b9 75%, transparent 75%);
+    }
+
+    .custom-accordion .accordion-item:nth-child(4) .accordion-header {
+        background: linear-gradient(90deg, #d0c5b2 0%, #d0c5b2 75%, transparent 75%);
+    }
+
+    .custom-accordion .accordion-item:nth-child(4):hover .accordion-header {
+        background: linear-gradient(90deg, #c8bda0 0%, #c8bda0 75%, transparent 75%);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .custom-accordion .accordion-header {
+            padding: 30px 30px;
+            clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
+        }
+
+        .custom-accordion .accordion-header h2 {
+            font-size: 32px;
+        }
+
+        .custom-accordion .accordion-content {
+            padding: 0 30px;
+        }
+
+        .custom-accordion .accordion-content.active {
+            padding: 30px 30px;
+        }
+
+        .custom-accordion .accordion-content p {
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .custom-accordion .accordion-header {
+            padding: 20px 20px;
+        }
+
+        .custom-accordion .accordion-header h2 {
+            font-size: 24px;
+        }
+
+        .custom-accordion .accordion-content {
+            padding: 0 20px;
+        }
+
+        .custom-accordion .accordion-content.active {
+            padding: 20px 20px;
+        }
+
+        .custom-accordion .accordion-content p {
+            font-size: 14px;
+        }
+    }
+</style>
+
+<div class="custom-accordion">
+    <!-- Accordion Item 1 -->
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <h2>How We Work...</h2>
+        </div>
+        <div class="accordion-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </div>
+
+    <!-- Accordion Item 2 -->
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <h2>Speed + Innovation</h2>
+        </div>
+        <div class="accordion-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+        </div>
+    </div>
+
+    <!-- Accordion Item 3 -->
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <h2>Retail Partnerships</h2>
+        </div>
+        <div class="accordion-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+    </div>
+
+    <!-- Accordion Item 4 -->
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <h2>Consumer Excitement</h2>
+        </div>
+        <div class="accordion-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+(function() {
+    // Ensure script only runs once
+    if (window.customAccordionInitialized) return;
+    window.customAccordionInitialized = true;
+
+    function initAccordion() {
+        const accordionHeaders = document.querySelectorAll('.custom-accordion .accordion-header');
+
+        accordionHeaders.forEach(header => {
+            // Remove any existing listeners
+            header.replaceWith(header.cloneNode(true));
+        });
+
+        // Re-select after cloning
+        const newHeaders = document.querySelectorAll('.custom-accordion .accordion-header');
+
+        newHeaders.forEach(header => {
+            header.addEventListener('click', function() {
+                const accordionItem = this.parentElement;
+                const accordionContent = this.nextElementSibling;
+
+                // Toggle active class
+                const isActive = accordionItem.classList.contains('active');
+
+                // Close all accordion items
+                document.querySelectorAll('.custom-accordion .accordion-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                document.querySelectorAll('.custom-accordion .accordion-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    accordionItem.classList.add('active');
+                    accordionContent.classList.add('active');
+                }
+            });
+        });
+
+        // Open first item by default
+        if (newHeaders.length > 0) {
+            newHeaders[0].click();
+        }
+    }
+
+    // Initialize on load and Elementor preview refresh
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAccordion);
+    } else {
+        initAccordion();
+    }
+
+    // For Elementor editor
+    if (window.elementorFrontend) {
+        window.elementorFrontend.hooks.addAction('frontend/element_ready/widget', function() {
+            initAccordion();
+        });
+    }
+})();
+</script>
